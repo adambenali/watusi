@@ -1,0 +1,3 @@
+opennmt-py==2.1.*
+lizard
+pycparser

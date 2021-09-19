@@ -1,0 +1,8 @@
+{
+    "grammar": {
+        "Statement": ["Assignment"],
+        "Expression": ["Number", "Variable"]
+    },
+    "max_nb_vars": 5,
+    "max_nb_statements": 1
+}

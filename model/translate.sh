@@ -1,0 +1,1 @@
+onmt_translate -model run/model_step_6000.pt -src run/data/test.ll -tgt run/data/test.hl -gpu 1 -verbose -o run/test_prediction

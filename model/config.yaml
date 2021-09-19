@@ -1,0 +1,66 @@
+# config.yaml
+
+## Where the samples will be written
+save_data: run/samples
+## Where the vocab(s) will be written
+src_vocab: run/watusi.vocab.src
+tgt_vocab: run/watusi.vocab.tgt
+# Prevent overwriting existing files in the folder
+overwrite: True
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: ../dataset/data/train.ll
+        path_tgt: ../dataset/data/train.hl
+    valid:
+        path_src: ../dataset/data/valid.ll
+        path_tgt: ../dataset/data/valid.hl
+
+# Train on a single GPU
+world_size: 2
+gpu_ranks: [0, 1]
+
+# Where to save the checkpoints
+save_model: run/model
+save_checkpoint_steps: 1000
+train_steps: 50000
+valid_steps: 500
+# learning_rate: 0.1
+
+# Batching
+queue_size: 10000
+bucket_size: 32768
+batch_type: "tokens"
+batch_size: 4096
+valid_batch_size: 8
+max_generator_batches: 2
+accum_count: [4]
+accum_steps: [0]
+
+# Optimization
+model_dtype: "fp32"
+optim: "adam"
+learning_rate: 2
+warmup_steps: 8000
+decay_method: "noam"
+adam_beta2: 0.998
+max_grad_norm: 0
+label_smoothing: 0.1
+param_init: 0
+param_init_glorot: true
+normalization: "tokens"
+
+# Model
+encoder_type: transformer
+decoder_type: transformer
+position_encoding: true
+enc_layers: 6
+dec_layers: 6
+heads: 8
+rnn_size: 512
+word_vec_size: 512
+transformer_ff: 2048
+dropout_steps: [0]
+dropout: [0.1]
+attention_dropout: [0.1]

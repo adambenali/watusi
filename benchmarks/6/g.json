@@ -1,0 +1,14 @@
+{
+    "grammar": {
+        "Statement": ["Assignment", "FunctionCallStatement", "IfBranch", "WhileLoop"],
+        "Expression": ["Number", "Variable", "BinaryOp", "ArrayIndexing"]
+    },
+    "max_nb_statements": 1,
+    "max_nb_vars": 5,
+    "max_nesting": 3,
+    "max_branch_statements": 4,
+    "max_array_size": 10,
+    "max_call_params": 2,
+
+    "__description__": "Benchmark 6"
+}

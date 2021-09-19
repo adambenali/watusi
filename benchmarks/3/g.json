@@ -1,0 +1,13 @@
+{
+    "grammar": {
+        "Statement": ["Assignment", "FunctionCallStatement", "IfBranch"],
+        "Expression": ["Number", "Variable", "BinaryOp", "BinaryOp"]
+    },
+    "max_nb_statements": 1,
+    "max_nb_vars": 5,
+    "max_nesting": 3,
+    "max_branch_statements": 1,
+    "max_call_params": 2,
+
+    "__description__": "Benchmark 4"
+}
